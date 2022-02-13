@@ -18,19 +18,15 @@ impl Solution {
     }
 }
 
-// macro_rules! test_macro {
-//     ($name:ident, $arg:expr => $ret:expr) => {
-//         #[test]
-//         fn $name() {
-//             assert_eq!($arg, $ret);
-//         }
-//     }
-// }
-
-// test_macro!(test1, Solution::is_palindrome(1) => true);
-// test_macro!(test2, Solution::is_palindrome(121) => true);
-// test_macro!(test3, Solution::is_palindrome(-121) => false);
-// test_macro!(test4, Solution::is_palindrome(-121) => true);
+#[cfg(test)]
+mod tests {
+    use test_macro::*;
+    use super::*;
+    test_eq!(test1, Solution::is_palindrome(1) => true);
+    test_eq!(test2, Solution::is_palindrome(121) => true);
+    test_eq!(test3, Solution::is_palindrome(-121) => false);
+    // test_eq!(test4, Solution::is_palindrome(-121) => false);
+}
 
 #[test]
 pub fn it_works() {
