@@ -48,14 +48,14 @@ fn get_inverse_tuple(x: i32, y: i32) -> (i32, i32) {
 mod tests {
     use test_macro::*;
     use super::{add, get_inverse_tuple, Solution};
-    test_eq!(test1, add(1, 2) => 3);
-    test_eq!(test2, 1 + 2 => 3);
-    test_eq!(test3, add(2, 2) => 4);
-    test_eq!(test4, get_inverse_tuple(1, 2) => (2, 1));
-    test_eq!(test5, get_inverse_tuple(2, 3) => (3, 2));
-    test_eq!(test6, get_inverse_tuple(2, 4) => (4, 2));
-    test_eq!(two_sum_test1, Solution::two_sum(vec ! [2, 7, 11, 15], 9) => vec ! [0, 1]);
-    test_eq!(two_sum_test2, Solution::two_sum(vec ! [2, 7, 11, 15], 9) => vec ! [0, 1]);
+    test_assert_eq!(test1, add(1, 2) => 3);
+    test_assert_eq!(test2, 1 + 2 => 3);
+    test_assert_eq!(test3, add(2, 2) => 4);
+    test_assert_eq!(test4, get_inverse_tuple(1, 2) => (2, 1));
+    test_assert_eq!(test5, get_inverse_tuple(2, 3) => (3, 2));
+    test_assert_eq!(test6, get_inverse_tuple(2, 4) => (4, 2));
+    test_assert_eq!(two_sum_test1, Solution::two_sum(vec ! [2, 7, 11, 15], 9) => vec ! [0, 1]);
+    test_assert_eq!(two_sum_test2, Solution::two_sum(vec ! [2, 7, 11, 15], 9) => vec ! [0, 1]);
 }
 
 #[cfg(test)]

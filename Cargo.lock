@@ -84,9 +84,9 @@ dependencies = [
 
 [[package]]
 name = "test-macro"
-version = "0.1.0"
+version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fb71c008d6a1de4745d703d8adc975308b8eea80c19c6d23cecb73a9515fe0d6"
+checksum = "5589096c504876eea749e659740c7da40e565546c66229bd69e04c1fa2dcaca3"
 
 [[package]]
 name = "unicode-xid"

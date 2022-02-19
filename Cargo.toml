@@ -10,4 +10,4 @@ edition = "2021"
 
 [dev-dependencies]
 test-case = "2.0.0-rc2"
-test-macro = "0.1.0"
+test-macro = "0.1.9"
