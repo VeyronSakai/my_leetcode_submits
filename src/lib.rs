@@ -4,6 +4,7 @@ mod problem9_palindrome_number;
 mod problem13;
 mod problem14;
 mod problem20;
+mod problem150;
 mod problem359;
 
 pub struct Solution;
