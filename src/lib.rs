@@ -8,9 +8,11 @@ mod problem21;
 mod problem26;
 mod problem27;
 mod problem28;
+mod problem35;
 mod problem68;
 mod problem150;
 mod problem359;
+
 
 
 pub struct Solution;
