@@ -45,8 +45,8 @@ impl Solution {
 mod tests {
     use super::*;
 
-    // test_macro::test_assert_eq!(exmaple1, Solution::search(vec![-1,0,3,5,9,12], 9) => 4);
-    // test_macro::test_assert_eq!(exmaple2, Solution::search(vec![-1,0,3,5,9,12], 2) => -1);
+    test_macro::test_assert_eq!(exmaple1, Solution::search(vec![-1,0,3,5,9,12], 9) => 4);
+    test_macro::test_assert_eq!(exmaple2, Solution::search(vec![-1,0,3,5,9,12], 2) => -1);
     test_macro::test_assert_eq!(exmaple3, Solution::search(vec![5], -5) => -1);
-    // test_macro::test_assert_eq!(exmaple4, Solution::search(vec![5], 5) => 0);
+    test_macro::test_assert_eq!(exmaple4, Solution::search(vec![5], 5) => 0);
 }
