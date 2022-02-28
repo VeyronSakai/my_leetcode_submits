@@ -1,5 +1,6 @@
 mod problem1_two_sum;
 mod problem2;
+mod problem3;
 mod problem9_palindrome_number;
 mod problem13;
 mod problem14;
@@ -23,6 +24,7 @@ mod problem557;
 mod problem704;
 mod problem876;
 mod problem977;
+
 
 pub struct Solution;
 
