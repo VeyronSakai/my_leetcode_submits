@@ -64,7 +64,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use test_macro::*;
     use super::*;
 
     test_macro::test_assert_eq!(test1, Solution::longest_common_prefix(vec!["flower".to_string(), "flow".to_string()]) => "flow".to_string());

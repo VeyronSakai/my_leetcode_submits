@@ -61,7 +61,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use test_macro::*;
     use super::*;
 
     test_macro::test_assert_eq!(test1, Solution::is_valid("()".to_string()) => true);

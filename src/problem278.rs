@@ -1,6 +1,6 @@
-// The API isBadVersion is defined for you.
-// isBadVersion(version:i32)-> bool;
-// to call it use self.isBadVersion(version)
+// The API is_bad_version is defined for you.
+// is_bad_version(version:i32)-> bool;
+// to call it use self.is_bad_version(version)
 
 struct Solution {
     bad_version: i32,
@@ -19,7 +19,7 @@ impl Solution {
         // ローカルでテストを実行した時はとても実行時間が長かった
         // let vec = (1..=n).collect::<Vec<i32>>().clone();
         //
-        // let ret = vec.partition_point(|&x| !self.isBadVersion(x));
+        // let ret = vec.partition_point(|&x| !self.is_bad_version(x));
         //
         // vec[ret]
 
@@ -28,7 +28,7 @@ impl Solution {
 
         while lo <= hi {
             let mid: i32 = lo + (hi - lo) / 2; // こうすればオーバーフローを防げる
-            if self.isBadVersion(mid) {
+            if self.is_bad_version(mid) {
                 hi = mid - 1;
             } else {
                 lo = mid + 1;
@@ -39,7 +39,7 @@ impl Solution {
     }
 
     // for test implementation
-    pub fn isBadVersion(&self, version: i32) -> bool {
+    pub fn is_bad_version(&self, version: i32) -> bool {
         return version >= self.bad_version;
     }
 }

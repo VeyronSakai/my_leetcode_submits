@@ -42,10 +42,6 @@ mod tests {
     use test_macro::*;
     use super::*;
 
-    fn setup() {
-        let logger = Logger::new();
-    }
-
     #[test]
     fn hoge() {
         let mut logger = Logger::new();

@@ -49,7 +49,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use test_macro::*;
     use super::*;
 
     test_macro::test_assert_eq!(example1, Solution::remove_nth_from_end(head(vec![1,2,3,4,5]), 2) => head(vec![1,2,3,5]));
