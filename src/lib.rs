@@ -26,6 +26,7 @@ mod problem557;
 mod problem567;
 mod problem704;
 mod problem832;
+mod problem852;
 mod problem876;
 mod problem905;
 mod problem977;
