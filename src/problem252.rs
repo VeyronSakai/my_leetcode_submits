@@ -3,6 +3,7 @@ use std::collections::HashSet;
 struct Solution;
 
 impl Solution {
+    // This is worst solution. Don't refer to this!
     pub fn can_attend_meetings(intervals: Vec<Vec<i32>>) -> bool {
         let mut set = HashSet::new();
 
