@@ -7,7 +7,7 @@ impl Solution {
         let mut magazine_map: HashMap<char, usize> = HashMap::new();
 
         for char in magazine.chars() {
-            let mut conut = magazine_map.entry(char).or_insert(0);
+            let mut count = magazine_map.entry(char).or_insert(0);
             *count += 1;
         }
 
