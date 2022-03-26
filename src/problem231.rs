@@ -2,17 +2,22 @@ struct Solution;
 
 impl Solution {
     pub fn is_power_of_two(n: i32) -> bool {
-        let n = n as i64;
-        let mut tmp = 1 as i64;
-        while tmp <= n {
-            if tmp == n {
-                return true;
-            }
+        // let n = n as i64;
+        // let mut tmp = 1 as i64;
+        // while tmp <= n {
+        //     if tmp == n {
+        //         return true;
+        //     }
+        //
+        //     tmp = 2 * tmp;
+        // }
+        //
+        // false
 
-            tmp = 2 * tmp;
+        if n <= 0 {
+            return false;
         }
-
-        false
+        return (n & (n - 1)) == 0;
     }
 }
 
