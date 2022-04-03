@@ -5,7 +5,7 @@ struct Solution;
 impl Solution {
     pub fn has_groups_size_x(deck: Vec<i32>) -> bool {
         let mut deck = deck;
-        
+
         let mut mp: HashMap<i32, usize> = HashMap::new();
 
         for val in &deck {

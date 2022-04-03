@@ -25,13 +25,18 @@ use std::cmp::max;
 
 impl Solution {
     pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
+        Self::helper(&root)
+    }
+
+    fn helper(root: &Option<Rc<RefCell<TreeNode>>>) -> i32 {
         match root {
-            Some(a) => {
-                let l = Solution::max_depth(a.borrow().left.clone());
-                let r = Solution::max_depth(a.borrow().right.clone());
-                return std::cmp::max(l, r) + 1;
+            Some(node) => {
+                let borrowed = node.borrow();
+                let left_depth = Self::helper(&borrowed.left);
+                let right_depth = Self::helper(&borrowed.right);
+                1 + std::cmp::max(left_depth, right_depth)
             }
-            None => return 0,
+            None => 0
         }
     }
 }
