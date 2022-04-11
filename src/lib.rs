@@ -30,6 +30,7 @@ mod problem205;
 mod problem206;
 mod problem217;
 mod problem219;
+mod problem226;
 mod problem228;
 mod problem231;
 mod problem242;
