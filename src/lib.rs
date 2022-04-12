@@ -1,3 +1,5 @@
+extern crate core;
+
 mod problem1_two_sum;
 mod problem2;
 mod problem3;
@@ -16,6 +18,7 @@ mod problem66;
 mod problem68;
 mod problem69;
 mod problem70;
+mod problem94;
 mod problem104;
 mod problem118;
 mod problem136;
