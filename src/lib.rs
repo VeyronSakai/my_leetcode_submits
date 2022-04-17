@@ -98,6 +98,7 @@ mod problem1920;
 mod problem1929;
 mod problem2089;
 mod problem2103;
+mod problem2235;
 mod problem2236;
 
 pub struct Solution;
