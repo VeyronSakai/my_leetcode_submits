@@ -19,43 +19,40 @@ impl TreeNode {
 
 struct Solution;
 
+
 use std::rc::Rc;
 use std::cell::RefCell;
+use std::collections::VecDeque;
 
 impl Solution {
     pub fn is_symmetric(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
-        let mut node_cache: Vec<Option<Rc<RefCell<TreeNode>>>> = Vec::new();
+        let mut queue: VecDeque<Option<Rc<RefCell<TreeNode>>>> = VecDeque::new();
+        let borrowed = root.as_ref().unwrap().borrow();
+        queue.push_back(borrowed.left.clone());
+        queue.push_back(borrowed.right.clone());
 
-        node_cache.push(root);
+        while !queue.is_empty() {
+            let node1 = queue.pop_front().unwrap();
+            let node2 = queue.pop_front().unwrap();
 
-        while !node_cache.is_empty() {
-            let mut tmp_node_cache: Vec<Option<Rc<RefCell<TreeNode>>>> = Vec::new();
-            let mut value_cache: Vec<Option<i32>> = Vec::new();
-
-            for n in &node_cache {
-                match n {
-                    None => {
-                        value_cache.push(None);
-                    }
-                    Some(x) => {
-                        value_cache.push(Some(x.borrow().val));
-
-                        tmp_node_cache.push(x.borrow().left.clone());
-                        tmp_node_cache.push(x.borrow().right.clone());
-                    }
-                }
-            }
-
-            // is value_cache symmetry
-            for i in 0..value_cache.len() / 2 {
-                if value_cache[i] != value_cache[value_cache.len() - i - 1] {
+            match (node1, node2) {
+                (Some(n), None) | (None, Some(n)) => {
                     return false;
                 }
-            }
+                (Some(n1), Some(n2)) => {
+                    if n1.borrow().val != n2.borrow().val {
+                        return false;
+                    }
 
-            node_cache.clear();
-            node_cache = tmp_node_cache.clone();
+                    queue.push_back(n1.borrow().left.clone());
+                    queue.push_back(n2.borrow().right.clone());
+                    queue.push_back(n2.borrow().left.clone());
+                    queue.push_back(n1.borrow().right.clone());
+                }
+                _ => {}
+            }
         }
+
 
         true
     }
