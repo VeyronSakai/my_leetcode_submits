@@ -46,8 +46,6 @@ impl Solution {
                 }
             }
 
-            // println!("{:?}", value_cache);
-
             // is value_cache symmetry
             for i in 0..value_cache.len() / 2 {
                 if value_cache[i] != value_cache[value_cache.len() - i - 1] {
