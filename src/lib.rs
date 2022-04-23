@@ -1,9 +1,9 @@
 extern crate core;
 
-mod problem1_two_sum;
+mod problem1;
 mod problem2;
 mod problem3;
-mod problem9_palindrome_number;
+mod problem9;
 mod problem13;
 mod problem14;
 mod problem15;
