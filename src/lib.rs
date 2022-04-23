@@ -55,6 +55,7 @@ mod problem383;
 mod problem387;
 mod problem389;
 mod problem408;
+mod problem404;
 mod problem415;
 mod problem461;
 mod problem463;
