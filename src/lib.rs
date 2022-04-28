@@ -84,6 +84,7 @@ mod problem914;
 mod problem925;
 mod problem933;
 mod problem938;
+mod problem942;
 mod problem965;
 mod problem976;
 mod problem977;
