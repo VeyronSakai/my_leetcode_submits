@@ -108,6 +108,7 @@ mod problem1502;
 mod problem1512;
 mod problem1523;
 mod problem1528;
+mod problem1570;
 mod problem1592;
 mod problem1624;
 mod problem1636;
