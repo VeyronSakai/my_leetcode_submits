@@ -99,6 +99,7 @@ mod problem1108;
 mod problem1122;
 mod problem1200;
 mod problem1207;
+mod problem1232;
 mod problem1275;
 mod problem1281;
 mod problem1331;
