@@ -2,12 +2,12 @@ use crate::Solution;
 
 impl Solution {
     pub fn move_zeroes(nums: &mut Vec<i32>) {
-        for mut i in 0..nums.len() - 1 {
-            for j in 0..nums.len() - 1 - i {
-                if nums[j] == 0 {
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = 0;
-                }
+        let mut ptr = 0;
+
+        for i in 0..nums.len() {
+            if nums[i] != 0 {
+                nums.swap(i, ptr);
+                ptr += 1;
             }
         }
     }
