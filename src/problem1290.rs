@@ -23,8 +23,7 @@ impl Solution {
         let mut ret = 0;
 
         while cur_node.is_some() {
-            ret = ret << 1;
-            ret += cur_node.as_ref().unwrap().val;
+            ret = (ret << 1) | cur_node.as_ref().unwrap().val;
             cur_node = cur_node.unwrap().next;
         }
 
