@@ -120,6 +120,7 @@ mod problem1385;
 mod problem1446;
 mod problem1464;
 mod problem1469;
+mod problem1474;
 mod problem1480;
 mod problem1491;
 mod problem1502;
