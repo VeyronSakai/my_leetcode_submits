@@ -19,24 +19,22 @@ impl ListNode {
 
 impl Solution {
     pub fn middle_node(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        let mut len = 0;
+        let mut slow_node = &head;
+        let mut fast_node = &head;
 
-        let mut cur: Option<Box<ListNode>> = head.clone();
-
-        while cur.is_some() {
-            len += 1;
-            cur = cur.unwrap().next;
+        while fast_node.is_some() && slow_node.is_some() {
+            match &fast_node.as_ref().unwrap().next {
+                None => {
+                    break;
+                }
+                Some(_) => {
+                    slow_node = &slow_node.as_ref().unwrap().next;
+                    fast_node = &fast_node.as_ref().unwrap().next.as_ref().unwrap().next
+                }
+            }
         }
 
-        let c = len / 2;
-
-        cur = head.clone();
-
-        for i in 0..c {
-            cur = cur.unwrap().next;
-        }
-
-        cur
+        slow_node.clone()
     }
 }
 
