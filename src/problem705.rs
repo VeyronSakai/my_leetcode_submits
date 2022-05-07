@@ -21,10 +21,3 @@ impl MyHashSet {
         return self.nums[key as usize];
     }
 }
-
-/// Your MyHashSet object will be instantiated and called as such:
-/// let obj = MyHashSet::new();
-/// obj.add(key);
-/// obj.remove(key);
-/// let ret_3: bool = obj.contains(key);
-///

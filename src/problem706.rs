@@ -21,12 +21,3 @@ impl MyHashMap {
         self.backets[key as usize] = -1;
     }
 }
-
-
-/**
- * Your MyHashMap object will be instantiated and called as such:
- * let obj = MyHashMap::new();
- * obj.put(key, value);
- * let ret_2: i32 = obj.get(key);
- * obj.remove(key);
- */
