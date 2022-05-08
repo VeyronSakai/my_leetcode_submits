@@ -19,6 +19,7 @@ mod problem67;
 mod problem68;
 mod problem69;
 mod problem70;
+mod problem83;
 mod problem94;
 mod problem100;
 mod problem101;
