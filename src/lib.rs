@@ -111,6 +111,7 @@ mod problem993;
 mod problem1022;
 mod problem1046;
 mod problem1047;
+mod problem1100;
 mod problem1108;
 mod problem1122;
 mod problem1137;
