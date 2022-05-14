@@ -161,6 +161,7 @@ mod problem2089;
 mod problem2099;
 mod problem2108;
 mod problem2103;
+mod problem2224;
 mod problem2231;
 mod problem2235;
 mod problem2236;
