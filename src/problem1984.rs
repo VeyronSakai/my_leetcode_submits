@@ -32,9 +32,4 @@ mod tests {
     fn example2() {
         assert_eq!(Solution::minimum_difference(vec![9, 4, 1, 7], 2), 2);
     }
-
-    // #[test]
-    // fn example2() {
-    //     assert_eq!(Solution::minimum_difference(vec![9, 4, 1, 7], 2), 2);
-    // }
 }
