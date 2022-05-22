@@ -170,6 +170,7 @@ mod problem1920;
 mod problem1929;
 mod problem1984;
 mod problem2000;
+mod problem2011;
 mod problem2073;
 mod problem2089;
 mod problem2099;
