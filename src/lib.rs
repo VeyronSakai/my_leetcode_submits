@@ -1,4 +1,5 @@
 extern crate core;
+extern crate core;
 
 mod problem1;
 mod problem2;
@@ -24,6 +25,7 @@ mod problem94;
 mod problem100;
 mod problem101;
 mod problem104;
+mod problem108;
 mod problem118;
 mod problem119;
 mod problem136;
