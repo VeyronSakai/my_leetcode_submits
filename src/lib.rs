@@ -164,6 +164,7 @@ mod problem1700;
 mod problem1720;
 mod problem1763;
 mod problem1768;
+mod problem1773;
 mod problem1779;
 mod problem1790;
 mod problem1822;
