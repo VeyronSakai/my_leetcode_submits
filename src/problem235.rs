@@ -34,14 +34,3 @@ impl Solution {
 }
 
 struct Solution;
-
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn example1() {
-        assert_eq!(Solution::lowest_common_ancestor())
-    }
-}
