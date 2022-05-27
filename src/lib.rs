@@ -94,6 +94,7 @@ mod problem709;
 mod problem724;
 mod problem733;
 mod problem746;
+mod problem760;
 mod problem766;
 mod problem771;
 mod problem783;
