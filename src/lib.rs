@@ -119,8 +119,10 @@ mod problem965;
 mod problem976;
 mod problem977;
 mod problem993;
+mod problem1008;
 mod problem1022;
 mod problem1025;
+mod problem1038;
 mod problem1046;
 mod problem1047;
 mod problem1100;
@@ -193,7 +195,6 @@ mod problem2224;
 mod problem2231;
 mod problem2235;
 mod problem2236;
-mod problem1008;
 
 pub struct Solution;
 
