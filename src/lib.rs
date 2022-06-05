@@ -188,6 +188,7 @@ mod problem1876;
 mod problem1877;
 mod problem1920;
 mod problem1929;
+mod problem1971;
 mod problem1984;
 mod problem2000;
 mod problem2011;
