@@ -18,6 +18,35 @@ impl ListNode {
 impl Solution {
     pub fn delete_nodes(head: Option<Box<ListNode>>, m: i32, n: i32) -> Option<Box<ListNode>> {
         Self::delete_nodes_internal(&head, m, n, 1)
+        // let mut head = head.clone();
+        // let mut ptr = head.as_mut();
+        // let mut next = None;
+        // let mut m_cnt = 0;
+        // let mut n_cnt = 0;
+        //
+        // while ptr.is_some() {
+        //     if m_cnt < m {
+        //         ptr = ptr.unwrap().next.as_mut();
+        //         m_cnt += 1;
+        //     } else if n_cnt < n - 1 {
+        //         match next {
+        //             None => {
+        //                 next = ptr.as_mut().unwrap().next;
+        //             }
+        //             Some(node) => {
+        //                 next = node.next
+        //             }
+        //         }
+        //         n_cnt += 1;
+        //     } else {
+        //         ptr = next.unwrap().next.as_mut();
+        //         next = None;
+        //         m_cnt = 0;
+        //         n_cnt = 0;
+        //     }
+        // }
+        //
+        // head
     }
 
     fn delete_nodes_internal(head: &Option<Box<ListNode>>, m: i32, n: i32, cur_count: i32) -> Option<Box<ListNode>> {
