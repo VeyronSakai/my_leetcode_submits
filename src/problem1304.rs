@@ -9,7 +9,7 @@ impl Solution {
 
         for i in 1..=n / 2 {
             ret.push(i as i32);
-            ret.push(-i as i32);
+            ret.push(-(i as i32));
         }
 
         ret
