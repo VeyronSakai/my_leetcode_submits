@@ -19,57 +19,58 @@ impl Solution {
         list1: Option<Box<ListNode>>,
         list2: Option<Box<ListNode>>,
     ) -> Option<Box<ListNode>> {
-        match (list1, list2) {
-            (None, None) => None,
-            (Some(node), None) | (None, Some(node)) => Some(node),
-            (Some(node1), Some(node2)) => {
-                if node1.val >= node2.val {
-                    Some(Box::new(ListNode {
-                        val: node2.val,
-                        next: Solution::merge_two_lists(Some(node1), node2.next),
-                    }))
-                } else {
-                    Some(Box::new(ListNode {
-                        val: node1.val,
-                        next: Solution::merge_two_lists(node1.next, Some(node2)),
-                    }))
-                }
-            }
-        }
-        // let (mut l1, mut l2) = (l1, l2);
-        // let mut head = Box::new(ListNode::new(0));
-        // let mut tail = Some(&mut head);
-        //
-        // while let Some(mut cur) = tail {
-        //     match (l1, l2) {
-        //         (Some(mut n1), Some(mut n2)) => {
-        //             if n1.val < n2.val {
-        //                 l1 = n1.next.take();   // get the ownership back for l1
-        //                 l2 = Some(n2);         // get the ownership back for l2
-        //                 cur.next = Some(n1);
-        //             } else {
-        //                 l1 = Some(n1);           // same as above
-        //                 l2 = n2.next.take();     // same as above
-        //                 cur.next = Some(n2);
-        //             }
-        //         }
-        //         (Some(n1), None) => {
-        //             cur.next = Some(n1);
-        //             break;
-        //         }
-        //         (None, Some(n2)) => {
-        //             cur.next = Some(n2);
-        //             break;
-        //         }
-        //         (None, None) => {
-        //             cur.next = None;
-        //             break;
+        // match (list1, list2) {
+        //     (None, None) => None,
+        //     (Some(node), None) | (None, Some(node)) => Some(node),
+        //     (Some(node1), Some(node2)) => {
+        //         if node1.val >= node2.val {
+        //             Some(Box::new(ListNode {
+        //                 val: node2.val,
+        //                 next: Solution::merge_two_lists(Some(node1), node2.next),
+        //             }))
+        //         } else {
+        //             Some(Box::new(ListNode {
+        //                 val: node1.val,
+        //                 next: Solution::merge_two_lists(node1.next, Some(node2)),
+        //             }))
         //         }
         //     }
-        //     tail = cur.next.as_mut();
         // }
-        //
-        // head.next
+
+        let (mut l1, mut l2) = (list1, list2);
+        let mut head = Box::new(ListNode::new(0));
+        let mut tail = Some(&mut head);
+
+        while let Some(mut cur) = tail {
+            match (l1, l2) {
+                (Some(mut n1), Some(mut n2)) => {
+                    if n1.val < n2.val {
+                        l1 = n1.next.take(); // get the ownership back for l1
+                        l2 = Some(n2); // get the ownership back for l2
+                        cur.next = Some(n1);
+                    } else {
+                        l1 = Some(n1); // same as above
+                        l2 = n2.next.take(); // same as above
+                        cur.next = Some(n2);
+                    }
+                }
+                (Some(n1), None) => {
+                    cur.next = Some(n1);
+                    break;
+                }
+                (None, Some(n2)) => {
+                    cur.next = Some(n2);
+                    break;
+                }
+                (None, None) => {
+                    cur.next = None;
+                    break;
+                }
+            }
+            tail = cur.next.as_mut();
+        }
+
+        head.next
     }
 }
 
