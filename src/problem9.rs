@@ -20,8 +20,8 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use test_macro::*;
     use super::*;
+    use test_macro::*;
     test_assert_eq!(test1, Solution::is_palindrome(1) => true);
     test_assert_eq!(test2, Solution::is_palindrome(121) => true);
     test_assert_eq!(test3, Solution::is_palindrome(-121) => false);
