@@ -16,9 +16,9 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use test_macro::*;
     use super::*;
+    use test_macro::*;
 
-    test_macro::test_assert_eq!(example1, Solution::remove_element(&mut vec![3,2,2,3], 3) => 2);
-    test_macro::test_assert_eq!(example2, Solution::remove_element(&mut vec![0,1,2,2,3,0,4,2], 2) => 5);
+    test_assert_eq!(example1, Solution::remove_element(&mut vec![3,2,2,3], 3) => 2);
+    test_assert_eq!(example2, Solution::remove_element(&mut vec![0,1,2,2,3,0,4,2], 2) => 5);
 }
