@@ -152,6 +152,7 @@ mod problem392;
 mod problem404;
 mod problem405;
 mod problem408;
+mod problem412;
 mod problem415;
 mod problem461;
 mod problem463;
